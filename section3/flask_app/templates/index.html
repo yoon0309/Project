@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div class="register_page">
+                <div class="form">
+                    <form action="{{url_for('predict')}}" method="POST">
+                        침실 수: <input type="number" name='bedrooms' placeholder="0~10,11,33"><br>
+                        화장실 수: <input type="number" name='bathrooms' placeholder="0~8"><br>
+                        층 수: <input type="number" name='floors' placeholder="0~3.5"><br>
+                        지어진 년도: <input type="number" name='yr_built' placeholder="1900~2015"><br>
+                        <input type="submit" value="predict" class="submit">
+                    </form>
+                <p> king county의 예상 집 값은 {{data}}($) 입니다.</p>
+                </div>
+        </div>
+        <A href="https://www.zillow.com/homes/King-County_rb/"> 미국 king county의 위치와 집 값 정보를 더 알고 싶다면? </A>
+        
+    </center>
+        
+</body>
+</html>
